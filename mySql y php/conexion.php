@@ -17,7 +17,7 @@
         'hostname' => "localhost",
         'username'=>"root",
         'password' => "",
-        'db'=>"prueba"
+        'db'=>"curso"
     );
 
     //CONEXION DE A LA BASE DE DATOS
@@ -33,7 +33,23 @@
     //CONFIGURAR EL UTF-8 PARA NO TENER PROBLEMAS CON LA TILDE O CON Ñ
     mysqli_query($conexion,"SET NAMES utf8");
 
-    
+    //INSERTAR DATOS EN LA BASE DE DATOS.
+    $sql = "INSERT INTO `persona` VALUES (null,'2102154875','Mariana','Caseres')";
+    $query = mysqli_query($conexion, $sql);
+
+    if ($query) print("Datos insertado correctamente");
+    else
+        print("Error".mysqli_error($conexion));
+
+    //SELECCIONAR UN REGISTRO
+    $sql = "SELECT * FROM persona";
+    $query = mysqli_query($conexion,$sql);
+    while ($consulta = mysqli_fetch_assoc($query)) {
+        # code...
+        var_dump($consulta);
+    }
+
+
 
 
 ?>
