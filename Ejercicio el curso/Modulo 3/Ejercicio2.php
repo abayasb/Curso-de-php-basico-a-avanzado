@@ -17,9 +17,6 @@
         }else{
             $resultado= "<h1>Error</h1>";
         }
-    
-
-   
 ?>
 
 <!DOCTYPE html>
