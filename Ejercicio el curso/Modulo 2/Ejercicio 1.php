@@ -28,14 +28,23 @@
 
     //MOSTRAR LA LONGUITUD
     echo "<h1>MOSTRAR LA LONGUITUD</h1>";
+    /**
+     * Metodo count cuenta todos los elementos
+     * de un arreglo u objecto
+     */
     $lon = count($array_numero);
     echo "<h3>$lon</h3>";
     
     //Mostrar de elemento 
     echo "<h1>Mostrar de elemento</h1>";
     $busqueda = 12;
-    if (empty(array_search($busqueda,$array_numero))) {
-        echo "<h3>Elemento encontrado</h3>";
+    /**
+     * el metodo array_search busca un elemento dentro de un arreglo y
+     * devuelve  la primera clave correspondiente.
+     */
+    $search=array_search($busqueda,$array_numero);
+    if (!empty($search)) {
+        echo "<h3>Elemento encontrado en el indice: $search</h3>";
     }else{
         echo "<h3>Elemento no encontrado</h3>";
     }
