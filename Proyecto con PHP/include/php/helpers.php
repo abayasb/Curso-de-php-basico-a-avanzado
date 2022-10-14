@@ -4,14 +4,23 @@
     {
         $alert = '';
         if (isset($errores[$campo]) && !empty($campo)) {
-            $alert = "<div class = 'alerta alerta-error'>".$errores[$campo].'</div>';
+            $alert = "<div class = 'alert alert-error'>".$errores[$campo].'</div>';
         }
         return $alert;
     }
 
     function deleteErrors()
     {
-       return session_unset();
+      $delete = false;
+      if (isset($_SESSION['errores'])) {
+        $_SESSION['errores'] = null;
        
+      }
+
+      if (isset($_SESSION['complete'])) {
+        $_SESSION['complete'] = null;
+        $delete = true;
+      }
+      $delete;
     }
 

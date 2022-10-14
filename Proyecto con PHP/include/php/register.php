@@ -1,6 +1,7 @@
 <?php
-session_start();
+
 if (isset($_POST['send'])) {
+    require_once('../config/conexion.php');
     //Recoger los valores del formulario registro
     $nombre =  (isset($_POST['nombre'])) ? $_POST['nombre'] : false;
     $email = isset($_POST['email']) ? $_POST['email'] : false;
@@ -23,12 +24,12 @@ if (isset($_POST['send'])) {
         $valid_apellido = false;
         $errores['apellido'] = "Error en el campo apellido";
     }
-
+    
     if (!empty($email) && filter_var($email, FILTER_VALIDATE_EMAIL)) {
         $valid_email = true;
     } else {
         $valid_email = false;
-        $errores['email'] = "Error en el campo email";
+        $errores['email'] = "Error en el campo emails";
     }
 
     if (!empty($password)) {
@@ -37,14 +38,29 @@ if (isset($_POST['send'])) {
         $valid_password = false;
         $errores['password'] = "Error en el campo password";
     }
-
+    //var_dump(mysqli_error($conexion));
+	//die();
+    
     $inset_data = false;
     if (count($errores) == 0) {
+        var_dump((count($errores)));
+        
         //Insert datos
         $inset_data = true;
+        $password_security = password_hash($password, PASSWORD_BCRYPT, ['cost' => 4]);
+        $sql = "INSERT INTO usuario VALUES('null','$nombre','$apellido','$email','$password_security',CURDATE());";
+        $save = mysqli_query($conexion, $sql);
+
+        if ($save) {
+            $_SESSION['complete'] = "Registro exitoso";
+            var_dump($_SESSION['complete']);
+        } else {
+            $_SESSION['errores']['general'] = "Error al guardar";
+            var_dump( $_SESSION['errores']['general']);
+        }
     } else {
         $_SESSION['errores'] = $errores;
-        header("Location: ../../index.php");
+        var_dump( $_SESSION['errores']);
     }
 }
-?>
+header("Location: ../../index.php");
