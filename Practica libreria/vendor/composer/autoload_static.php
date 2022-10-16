@@ -36,6 +36,8 @@ class ComposerStaticInit0698fbea62f7bcc3088c94e05b9ab472
         'TCPDF_IMPORT' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_import.php',
         'TCPDF_PARSER' => __DIR__ . '/..' . '/tecnickcom/tcpdf/tcpdf_parser.php',
         'TCPDF_STATIC' => __DIR__ . '/..' . '/tecnickcom/tcpdf/include/tcpdf_static.php',
+        'Zebra_Pagination' => __DIR__ . '/..' . '/stefangabos/zebra_pagination/Zebra_Pagination.php',
+        'Zebra_Session' => __DIR__ . '/..' . '/stefangabos/zebra_session/Zebra_Session.php',
     );
 
     public static function getInitializer(ClassLoader $loader)

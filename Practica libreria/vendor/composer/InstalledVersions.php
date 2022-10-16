@@ -32,7 +32,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'ed7db3823deaddac05e6dc26b584f9f815bf695d',
+    'reference' => '79df4ffb02e1a12f82963e50a3c897b95fd4ba2f',
     'name' => '__root__',
   ),
   'versions' => 
@@ -44,7 +44,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'ed7db3823deaddac05e6dc26b584f9f815bf695d',
+      'reference' => '79df4ffb02e1a12f82963e50a3c897b95fd4ba2f',
     ),
     'spipu/html2pdf' => 
     array (
@@ -54,6 +54,24 @@ private static $installed = array (
       array (
       ),
       'reference' => 'c002749cf21733d53fb9e50d082ca3d1bde06c85',
+    ),
+    'stefangabos/zebra_pagination' => 
+    array (
+      'pretty_version' => '2.4.3',
+      'version' => '2.4.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'df046423ddb07b21b1ce119c68da0187786ac632',
+    ),
+    'stefangabos/zebra_session' => 
+    array (
+      'pretty_version' => '3.1.0',
+      'version' => '3.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '79bb0f21127207dacfd524797e434227e0bf891e',
     ),
     'tecnickcom/tcpdf' => 
     array (

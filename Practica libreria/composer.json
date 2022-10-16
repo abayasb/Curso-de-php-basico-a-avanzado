@@ -1,5 +1,7 @@
 {
     "require": {
-        "spipu/html2pdf": "^5.2"
+        "spipu/html2pdf": "^5.2",
+        "stefangabos/zebra_session": "^3.1",
+        "stefangabos/zebra_pagination": "^2.4"
     }
 }
