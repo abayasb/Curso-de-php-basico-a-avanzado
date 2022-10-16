@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '79df4ffb02e1a12f82963e50a3c897b95fd4ba2f',
+    'reference' => '5c7d2492ff7061cd9a8df4382e242ce3d8c18e6a',
     'name' => '__root__',
   ),
   'versions' => 
@@ -18,7 +18,16 @@
       'aliases' => 
       array (
       ),
-      'reference' => '79df4ffb02e1a12f82963e50a3c897b95fd4ba2f',
+      'reference' => '5c7d2492ff7061cd9a8df4382e242ce3d8c18e6a',
+    ),
+    'masterexploder/phpthumb' => 
+    array (
+      'pretty_version' => '2.1',
+      'version' => '2.1.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '01f6aa65aa3d136e175f67da2b4ea3e316770d02',
     ),
     'spipu/html2pdf' => 
     array (
