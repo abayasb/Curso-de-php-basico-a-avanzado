@@ -70,7 +70,7 @@ $usuario = new UsuarioAdmin();
 $usuario->informacion();
 
 // Comprobar si existe una clase
-$clase = @class_exists('PanelAdministrador\Usuari2o');
+$clase = @class_exists('PanelAdministrador\Usuario');
 if($clase){
 	echo "<h1>La clase SI existe</h1>";
 }else{
