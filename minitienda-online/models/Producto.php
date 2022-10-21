@@ -128,7 +128,7 @@ class Producto extends Model
 
     public function getOne()
     {
-        $sql = "SELECT * FROM productos WHERE id = '{$this->getId()}'";
+        $sql = "SELECT * FROM productos WHERE id = {$this->getId()}";
         $result = $this->databese->query($sql);
         return $result->fetch_object();
     }
